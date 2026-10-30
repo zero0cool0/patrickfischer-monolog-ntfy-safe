@@ -1,0 +1,20 @@
+{
+    "name": "patrickfischer/monolog-ntfy-safe",
+    "description": "A non fatal version of a Monolog handler for ntfy.sh",
+    "type": "library",
+    "license": "MIT",
+     "autoload": {
+        "psr-4": {
+            "Patrickfischer\\Monolog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Patrick Fischer",
+            "email": "zero0cool@proton.me"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^3.0"
+    }
+}
