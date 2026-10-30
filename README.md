@@ -25,13 +25,13 @@ return [
             'driver'  => 'monolog',
             'handler' => SafeNtfyWebhookHandler::class,
             'with' => [
-                'url' => env('NTFY_URL'),
+                'url' => env('LOG:_NTFY_URL'),
                 // Optional access token
-                'access_token' => null,
+                'access_token' => env('LOG_NTFY_TOKEN'),
                 // Implement a hard to guess topic
                 'topic' => sha1('Laravel'),
                 'title' => env('LOG_NTFY_TITLE'),
-                'level' => env('LOG_LEVEL_NTFY', 'error'),
+                'level' => env('LOG_NTFY_LEVEL', 'error'),
                 'timeout_ms' => 1000,
                 'tags' => 'warning,php',
                 'bubble' => true,
