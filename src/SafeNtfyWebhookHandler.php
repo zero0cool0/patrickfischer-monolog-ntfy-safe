@@ -67,7 +67,7 @@ class SafeNtfyWebhookHandler extends AbstractProcessingHandler
         }
         $json = json_decode($curlResponse);
         if (!$json || !isset($json->id)) {
-            error_log("SafeNtfyWebhookHandler ntfy server retuned invalid response");
+            error_log("SafeNtfyWebhookHandler ntfy server retuned invalid response: {$curlResponse}");
         }
     }
 }
